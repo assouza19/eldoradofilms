@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Eldorado Film\'s</string>
+    <string name="search">Search</string>
+    <string name="most_popular_title">Most Popular</string>
+    <string name="base_url_images">https://image.tmdb.org/t/p/original/%s</string>
+    <string name="most_popular_rate">IMDb %s</string>
+</resources>
