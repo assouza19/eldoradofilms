@@ -10,8 +10,4 @@
 9        android:targetSdkVersion="34" />
 9-->/Users/souza.aline/Desktop/basedroid-master/features/home/src/main/AndroidManifest.xml
 10
-11    <application>
-11-->/Users/souza.aline/Desktop/basedroid-master/features/home/src/main/AndroidManifest.xml:4:5-6:19
-12    </application>
-13
-14</manifest>
+11</manifest>

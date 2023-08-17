@@ -1,7 +1,7 @@
 package com.br.eldoradofilms.presentation
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.br.eldoradofilms.domain.usecase.GetFilmsListUseCase
+import com.br.eldoradofilms.domain.usecase.GetMovieListUseCase
 import com.br.eldoradofilms.presentation.model.MoviesListUI
 import com.br.eldoradofilms.presentation.viewmodel.HomeViewModel
 import com.br.eldoradofilms.utils.MainCoroutineRule
@@ -24,7 +24,7 @@ class HomeViewModelTest {
     @get:Rule
     val instantExecutorRule = InstantTaskExecutorRule()
 
-    private val useCase: GetFilmsListUseCase = mock()
+    private val useCase: GetMovieListUseCase = mock()
     private val viewModel: HomeViewModel by lazy {
         HomeViewModel(useCase)
     }

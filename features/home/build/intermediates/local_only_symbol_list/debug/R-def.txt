@@ -1,30 +1,5 @@
 R_DEF: Internal format may change without notice
 local
-color black
-color primary
-color purple_200
-color purple_500
-color purple_700
-color secondary
-color teal_200
-color teal_700
-color white
-color yellow
-dimen margin_12dp
-dimen margin_24dp
-dimen margin_48dp
-dimen margin_4dp
-dimen text_18sp
-dimen text_24sp
-dimen text_8sp
-drawable bg_card_view
-drawable bg_home
-drawable bg_imdb
-drawable bg_search
-drawable icon_account
-drawable icon_heart
-drawable icon_home
-drawable icon_shuffle
 id account
 id filmImagePreview
 id heart
@@ -32,6 +7,7 @@ id home
 id loadingMostPopular
 id mostPopularCard
 id mostPopularFilmNote
+id mostPopularFilmTitle
 id mostPopularList
 id mostPopularTitle
 id searchBar
@@ -41,7 +17,6 @@ layout item_most_popular
 menu home_menu
 raw loading_movies
 string app_name
-string base_url_images
 string most_popular_rate
 string most_popular_title
 string search

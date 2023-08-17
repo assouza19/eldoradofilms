@@ -1,7 +1,7 @@
 package com.br.eldoradofilms.di
 
 import android.app.Application
-import com.br.eldoradofilms.data.api.TMDBService
+import br.com.common.data.api.EldoradoFilmsService
 import com.br.eldoradofilms.retrofit.HttpClient
 import com.br.eldoradofilms.retrofit.RetrofitClient
 import org.koin.android.ext.koin.androidContext
@@ -14,6 +14,9 @@ class AppApplication : Application() {
         startKoin {
             androidContext(this@AppApplication)
             modules(domainModules)
+            modules(detailPresentationModules)
+            modules(detailDataModules)
+            modules(detailDomainModules)
             modules(dataModules)
             modules(presentationModules)
             modules(networkModules)
@@ -24,6 +27,6 @@ class AppApplication : Application() {
     private val networkModules = module {
         single { RetrofitClient().newInstance() }
         single { HttpClient(get()) }
-        single { get<HttpClient>().create(TMDBService::class.java) }
+        single { get<HttpClient>().create(EldoradoFilmsService::class.java) }
     }
 }

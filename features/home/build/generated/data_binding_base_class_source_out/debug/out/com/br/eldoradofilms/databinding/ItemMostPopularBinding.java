@@ -28,13 +28,17 @@ public final class ItemMostPopularBinding implements ViewBinding {
   @NonNull
   public final TextView mostPopularFilmNote;
 
+  @NonNull
+  public final TextView mostPopularFilmTitle;
+
   private ItemMostPopularBinding(@NonNull CardView rootView,
       @NonNull AppCompatImageView filmImagePreview, @NonNull CardView mostPopularCard,
-      @NonNull TextView mostPopularFilmNote) {
+      @NonNull TextView mostPopularFilmNote, @NonNull TextView mostPopularFilmTitle) {
     this.rootView = rootView;
     this.filmImagePreview = filmImagePreview;
     this.mostPopularCard = mostPopularCard;
     this.mostPopularFilmNote = mostPopularFilmNote;
+    this.mostPopularFilmTitle = mostPopularFilmTitle;
   }
 
   @Override
@@ -78,8 +82,14 @@ public final class ItemMostPopularBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.mostPopularFilmTitle;
+      TextView mostPopularFilmTitle = rootView.findViewById(id);
+      if (mostPopularFilmTitle == null) {
+        break missingId;
+      }
+
       return new ItemMostPopularBinding((CardView) rootView, filmImagePreview, mostPopularCard,
-          mostPopularFilmNote);
+          mostPopularFilmNote, mostPopularFilmTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

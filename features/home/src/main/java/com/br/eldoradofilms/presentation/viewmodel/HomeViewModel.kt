@@ -4,14 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.br.eldoradofilms.domain.usecase.GetFilmsListUseCase
+import com.br.eldoradofilms.domain.usecase.GetMovieListUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
-    private val useCase: GetFilmsListUseCase
+    private val useCase: GetMovieListUseCase
 ) : ViewModel() {
 
     private val _viewState = MutableStateFlow<HomeViewState>(HomeViewState.InitialState)
@@ -25,7 +25,11 @@ class HomeViewModel(
             runCatching {
                 useCase()
             }.onSuccess {
-                _viewState.value = HomeViewState.OnResume(getCurrentUiModel().copy(list = it, isLoading = false))
+                _viewState.value = HomeViewState.OnResume(
+                    getCurrentUiModel().copy(
+                        list = it, isLoading = false
+                    )
+                )
             }.onFailure {
                 showErrorScreen()
             }

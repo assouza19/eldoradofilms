@@ -1,6 +1,6 @@
 package com.br.eldoradofilms.data.mapper
 
-import com.br.eldoradofilms.data.model.MoviesListDTO
+import br.com.common.data.model.MoviesListDTO
 import com.br.eldoradofilms.domain.model.Movie
 import com.br.eldoradofilms.domain.model.MoviesList
 import com.br.eldoradofilms.utils.Mapper

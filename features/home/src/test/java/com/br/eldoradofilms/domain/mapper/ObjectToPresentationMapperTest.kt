@@ -7,7 +7,7 @@ import kotlin.test.assertEquals
 
 class ObjectToPresentationMapperTest {
 
-    private val mapper: DomainToPresentationMapper = DomainToPresentationMapper()
+    private val mapper: HomeDomainMapper = HomeDomainMapper()
 
     @Test
     fun `when mapper should map to presentation`() {

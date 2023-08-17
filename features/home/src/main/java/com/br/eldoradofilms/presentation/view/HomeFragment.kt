@@ -80,7 +80,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         viewModel.viewAction.observe(viewLifecycleOwner) { action ->
             when(action) {
-                HomeViewAction.ShowErrorScreen -> TODO()
+                HomeViewAction.ShowErrorScreen -> {
+
+                }
             }
         }
     }

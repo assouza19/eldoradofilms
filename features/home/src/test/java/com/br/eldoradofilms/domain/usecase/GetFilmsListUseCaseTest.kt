@@ -13,7 +13,7 @@ import kotlin.test.assertEquals
 @ExperimentalCoroutinesApi
 class GetFilmsListUseCaseTest {
     private val repository: HomeRepository = mock()
-    private val useCase: GetFilmsListUseCase = GetFilmsListUseCase(repository)
+    private val useCase: GetMovieListUseCase = GetMovieListUseCase(repository)
 
     @Test
     fun `when invoke should return success`() = runBlockingTest {

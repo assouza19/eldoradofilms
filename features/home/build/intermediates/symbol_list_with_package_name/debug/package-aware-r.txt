@@ -1912,6 +1912,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_back
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -1925,6 +1926,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable icon_account
+drawable icon_back
 drawable icon_heart
 drawable icon_home
 drawable icon_shuffle
@@ -2203,6 +2205,7 @@ id month_navigation_previous
 id month_title
 id mostPopularCard
 id mostPopularFilmNote
+id mostPopularFilmTitle
 id mostPopularList
 id mostPopularTitle
 id motion_base

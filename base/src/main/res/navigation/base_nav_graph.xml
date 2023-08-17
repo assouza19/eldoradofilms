@@ -13,8 +13,7 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.br.eldoradofilms.presentation.view.DetailsFragment"
-        tools:layout="@layout/fragment_details">
-    </fragment>
+        tools:layout="@layout/fragment_details" />
 
     <action android:id="@+id/navigate_to_home_fragment"
         app:destination="@id/homeFragment"/>

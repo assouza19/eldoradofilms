@@ -14,7 +14,7 @@ import kotlin.test.assertEquals
 @ExperimentalCoroutinesApi
 class RemoteDataSourceTest {
 
-    private val dataSource: RemoteDataSource = mock()
+    private val dataSource: HomeRemoteDataSource = mock()
 
     private val repository: HomeRepository by lazy {
         HomeRepositoryImpl(dataSource)

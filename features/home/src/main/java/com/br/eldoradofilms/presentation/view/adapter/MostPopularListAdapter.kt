@@ -52,15 +52,17 @@ internal class MostPopularListAdapter(
         binding.root
     ) {
         fun update(movie: MovieUI) {
+            binding.mostPopularFilmTitle.text = movie.title
             binding.mostPopularFilmNote.text = context.getString(R.string.most_popular_rate, movie.voteAverage.toString())
             binding.filmImagePreview.setOnClickListener {
                 clickCallback.invoke(movie.id)
             }
 
-            val url = context.getString( R.string.base_url_images, movie.posterPath)
+            val url = context.getString( R.string.base_url_images, movie.backdropPath)
             Picasso.get()
                 .load(url)
-                .resize(180, 230)
+                .centerCrop()
+                .fit()
                 .placeholder(R.drawable.bg_home)
                 .error(R.drawable.bg_home)
                 .into(binding.filmImagePreview)

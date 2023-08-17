@@ -3,3 +3,5 @@ rootProject.name = "EldoradoFilms"
 include ':features'
 include ':features:detail'
 include ':features:home'
+include ':design_system'
+include ':common'

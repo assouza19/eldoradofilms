@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="primary">#2B5876</color>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="secondary">#4E4376</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="yellow">#F5C518</color>
-    <dimen name="margin_12dp">12dp</dimen>
-    <dimen name="margin_24dp">24dp</dimen>
-    <dimen name="margin_48dp">48dp</dimen>
-    <dimen name="margin_4dp">4dp</dimen>
-    <dimen name="text_18sp">18sp</dimen>
-    <dimen name="text_24sp">24sp</dimen>
-    <dimen name="text_8sp">8sp</dimen>
     <string name="app_name">Eldorado Film\'s</string>
-    <string name="base_url_images">https://image.tmdb.org/t/p/original/%s</string>
     <string name="most_popular_rate">IMDb %s</string>
     <string name="most_popular_title">Most Popular</string>
     <string name="search">Search</string>
