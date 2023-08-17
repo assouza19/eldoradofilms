@@ -2406,6 +2406,8 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id upcomingCard
+id upcomingList
 id upcomingTitle
 id vertical_only
 id view_offset_helper
@@ -2512,6 +2514,7 @@ layout fragment_home
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_most_popular
+layout item_upcoming
 layout items_menu
 layout material_chip_input_combo
 layout material_clock_display

@@ -2405,6 +2405,8 @@ int id unchecked 0x0
 int id uniform 0x0
 int id unlabeled 0x0
 int id up 0x0
+int id upcomingCard 0x0
+int id upcomingList 0x0
 int id upcomingTitle 0x0
 int id vertical_only 0x0
 int id view_offset_helper 0x0
@@ -2511,6 +2513,7 @@ int layout fragment_home 0x0
 int layout ime_base_split_test_activity 0x0
 int layout ime_secondary_split_test_activity 0x0
 int layout item_most_popular 0x0
+int layout item_upcoming 0x0
 int layout items_menu 0x0
 int layout material_chip_input_combo 0x0
 int layout material_clock_display 0x0

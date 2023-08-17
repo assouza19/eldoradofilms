@@ -14,6 +14,7 @@
         android:layout_marginTop="@dimen/margin_48dp"
         android:background="@drawable/bg_search"
         android:hint="@string/search"
+        app:queryHint="@string/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -83,5 +84,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/menu_actions" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/upcomingList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upcomingTitle"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_upcoming" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

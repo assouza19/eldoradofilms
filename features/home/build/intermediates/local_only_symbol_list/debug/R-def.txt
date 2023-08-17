@@ -21,9 +21,12 @@ id textCinema
 id textGenres
 id textMovies
 id textTv
+id upcomingCard
+id upcomingList
 id upcomingTitle
 layout fragment_home
 layout item_most_popular
+layout item_upcoming
 layout items_menu
 menu home_menu
 raw loading_movies

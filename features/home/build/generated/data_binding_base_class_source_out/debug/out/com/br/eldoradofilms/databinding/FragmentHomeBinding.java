@@ -37,18 +37,23 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final SearchView searchBar;
 
   @NonNull
+  public final RecyclerView upcomingList;
+
+  @NonNull
   public final TextView upcomingTitle;
 
   private FragmentHomeBinding(@NonNull ConstraintLayout rootView,
       @NonNull LottieAnimationView loadingMostPopular, @NonNull ItemsMenuBinding menuActions,
       @NonNull RecyclerView mostPopularList, @NonNull TextView mostPopularTitle,
-      @NonNull SearchView searchBar, @NonNull TextView upcomingTitle) {
+      @NonNull SearchView searchBar, @NonNull RecyclerView upcomingList,
+      @NonNull TextView upcomingTitle) {
     this.rootView = rootView;
     this.loadingMostPopular = loadingMostPopular;
     this.menuActions = menuActions;
     this.mostPopularList = mostPopularList;
     this.mostPopularTitle = mostPopularTitle;
     this.searchBar = searchBar;
+    this.upcomingList = upcomingList;
     this.upcomingTitle = upcomingTitle;
   }
 
@@ -110,6 +115,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.upcomingList;
+      RecyclerView upcomingList = rootView.findViewById(id);
+      if (upcomingList == null) {
+        break missingId;
+      }
+
       id = R.id.upcomingTitle;
       TextView upcomingTitle = rootView.findViewById(id);
       if (upcomingTitle == null) {
@@ -117,7 +128,8 @@ public final class FragmentHomeBinding implements ViewBinding {
       }
 
       return new FragmentHomeBinding((ConstraintLayout) rootView, loadingMostPopular,
-          binding_menuActions, mostPopularList, mostPopularTitle, searchBar, upcomingTitle);
+          binding_menuActions, mostPopularList, mostPopularTitle, searchBar, upcomingList,
+          upcomingTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

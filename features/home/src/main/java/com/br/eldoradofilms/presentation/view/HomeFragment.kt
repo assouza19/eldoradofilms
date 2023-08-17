@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout.HORIZONTAL
+import android.widget.LinearLayout.VERTICAL
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -14,6 +15,7 @@ import com.br.eldoradofilms.databinding.FragmentHomeBinding
 import com.br.eldoradofilms.presentation.listener.HomeListener
 import com.br.eldoradofilms.presentation.model.MovieUI
 import com.br.eldoradofilms.presentation.view.adapter.MostPopularListAdapter
+import com.br.eldoradofilms.presentation.view.adapter.UpcomingListAdapter
 import com.br.eldoradofilms.presentation.viewmodel.HomeViewAction
 import com.br.eldoradofilms.presentation.viewmodel.HomeViewModel
 import com.br.eldoradofilms.presentation.viewmodel.HomeViewState
@@ -26,6 +28,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private var listener: HomeListener? = null
     private val mostPopularAdapter by lazy {
         MostPopularListAdapter { itemClicked ->
+            onItemClicked(itemClicked)
+        }
+    }
+    private val upcomingAdapter by lazy {
+        UpcomingListAdapter { itemClicked ->
             onItemClicked(itemClicked)
         }
     }
@@ -63,6 +70,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             requireContext(), HORIZONTAL, false
         )
         viewBinding.mostPopularList.adapter = mostPopularAdapter
+
+        viewBinding.upcomingList.layoutManager = CenterZoomLayoutManager(
+            requireContext(), HORIZONTAL, false
+        )
+        viewBinding.upcomingList.adapter = upcomingAdapter
     }
 
     private fun setupObservables() {
@@ -73,13 +85,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                         handleList(state.uiModel.list)
                         handleLoadingVisibility(state.uiModel.isLoading)
                     }
+
                     else -> {}
                 }
             }
         }
 
         viewModel.viewAction.observe(viewLifecycleOwner) { action ->
-            when(action) {
+            when (action) {
                 HomeViewAction.ShowErrorScreen -> {
 
                 }
@@ -93,6 +106,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private fun handleList(list: List<MovieUI>) {
         mostPopularAdapter.update(list)
+        upcomingAdapter.update(list)
     }
 
     private fun onItemClicked(movieClickedId: Int) {
