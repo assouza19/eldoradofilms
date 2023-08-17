@@ -3,4 +3,9 @@
     <string name="search">Search</string>
     <string name="most_popular_title">Most Popular</string>
     <string name="most_popular_rate">IMDb %s</string>
+    <string name="genres">Genres</string>
+    <string name="tv_series_title">TV Series</string>
+    <string name="movies_title">Movies</string>
+    <string name="in_theatre_title">In Theatre</string>
+    <string name="upcoming_realeses_title">Upcoming realeses</string>
 </resources>

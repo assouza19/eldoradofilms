@@ -25,6 +25,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final LottieAnimationView loadingMostPopular;
 
   @NonNull
+  public final ItemsMenuBinding menuActions;
+
+  @NonNull
   public final RecyclerView mostPopularList;
 
   @NonNull
@@ -33,14 +36,20 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final SearchView searchBar;
 
+  @NonNull
+  public final TextView upcomingTitle;
+
   private FragmentHomeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LottieAnimationView loadingMostPopular, @NonNull RecyclerView mostPopularList,
-      @NonNull TextView mostPopularTitle, @NonNull SearchView searchBar) {
+      @NonNull LottieAnimationView loadingMostPopular, @NonNull ItemsMenuBinding menuActions,
+      @NonNull RecyclerView mostPopularList, @NonNull TextView mostPopularTitle,
+      @NonNull SearchView searchBar, @NonNull TextView upcomingTitle) {
     this.rootView = rootView;
     this.loadingMostPopular = loadingMostPopular;
+    this.menuActions = menuActions;
     this.mostPopularList = mostPopularList;
     this.mostPopularTitle = mostPopularTitle;
     this.searchBar = searchBar;
+    this.upcomingTitle = upcomingTitle;
   }
 
   @Override
@@ -76,6 +85,13 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.menu_actions;
+      View menuActions = rootView.findViewById(id);
+      if (menuActions == null) {
+        break missingId;
+      }
+      ItemsMenuBinding binding_menuActions = ItemsMenuBinding.bind(menuActions);
+
       id = R.id.mostPopularList;
       RecyclerView mostPopularList = rootView.findViewById(id);
       if (mostPopularList == null) {
@@ -94,8 +110,14 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.upcomingTitle;
+      TextView upcomingTitle = rootView.findViewById(id);
+      if (upcomingTitle == null) {
+        break missingId;
+      }
+
       return new FragmentHomeBinding((ConstraintLayout) rootView, loadingMostPopular,
-          mostPopularList, mostPopularTitle, searchBar);
+          binding_menuActions, mostPopularList, mostPopularTitle, searchBar, upcomingTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

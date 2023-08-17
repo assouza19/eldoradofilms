@@ -1531,6 +1531,7 @@ dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
 dimen margin_12dp
 dimen margin_24dp
+dimen margin_32dp
 dimen margin_48dp
 dimen margin_4dp
 dimen material_bottom_sheet_max_width
@@ -1791,6 +1792,7 @@ dimen test_navigation_bar_item_min_width
 dimen test_navigation_bar_label_padding
 dimen test_navigation_bar_shadow_height
 dimen test_navigation_bar_text_size
+dimen text_10sp
 dimen text_18sp
 dimen text_24sp
 dimen text_8sp
@@ -1898,6 +1900,7 @@ drawable avd_show_password
 drawable bg_card_view
 drawable bg_home
 drawable bg_imdb
+drawable bg_menu_home
 drawable bg_search
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -1927,9 +1930,13 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable icon_account
 drawable icon_back
+drawable icon_cinema
+drawable icon_genres
 drawable icon_heart
 drawable icon_home
+drawable icon_movie
 drawable icon_shuffle
+drawable icon_tv
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2147,6 +2154,10 @@ id home
 id honorRequest
 id horizontal_only
 id icon
+id iconCinema
+id iconGenres
+id iconMovies
+id iconTv
 id icon_group
 id ignore
 id ignoreRequest
@@ -2194,6 +2205,7 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id menu_actions
 id message
 id middle
 id mini
@@ -2361,8 +2373,12 @@ id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id text
 id text2
+id textCinema
+id textGenres
+id textMovies
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textTv
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2390,6 +2406,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id upcomingTitle
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -2495,6 +2512,7 @@ layout fragment_home
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_most_popular
+layout items_menu
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2628,8 +2646,10 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string genres
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string in_theatre_title
 string item_view_role_description
 string material_clock_display_divider
 string material_clock_toggle_content_description
@@ -2653,6 +2673,7 @@ string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
 string most_popular_rate
 string most_popular_title
+string movies_title
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -2698,6 +2719,8 @@ string path_password_strike_through
 string search
 string search_menu_title
 string status_bar_notification_info_overflow
+string tv_series_title
+string upcoming_realeses_title
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

@@ -1530,6 +1530,7 @@ int dimen item_touch_helper_swipe_escape_max_velocity 0x0
 int dimen item_touch_helper_swipe_escape_velocity 0x0
 int dimen margin_12dp 0x0
 int dimen margin_24dp 0x0
+int dimen margin_32dp 0x0
 int dimen margin_48dp 0x0
 int dimen margin_4dp 0x0
 int dimen material_bottom_sheet_max_width 0x0
@@ -1790,6 +1791,7 @@ int dimen test_navigation_bar_item_min_width 0x0
 int dimen test_navigation_bar_label_padding 0x0
 int dimen test_navigation_bar_shadow_height 0x0
 int dimen test_navigation_bar_text_size 0x0
+int dimen text_10sp 0x0
 int dimen text_18sp 0x0
 int dimen text_24sp 0x0
 int dimen text_8sp 0x0
@@ -1897,6 +1899,7 @@ int drawable avd_show_password 0x0
 int drawable bg_card_view 0x0
 int drawable bg_home 0x0
 int drawable bg_imdb 0x0
+int drawable bg_menu_home 0x0
 int drawable bg_search 0x0
 int drawable btn_checkbox_checked_mtrl 0x0
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x0
@@ -1926,9 +1929,13 @@ int drawable ic_mtrl_chip_checked_circle 0x0
 int drawable ic_mtrl_chip_close_circle 0x0
 int drawable icon_account 0x0
 int drawable icon_back 0x0
+int drawable icon_cinema 0x0
+int drawable icon_genres 0x0
 int drawable icon_heart 0x0
 int drawable icon_home 0x0
+int drawable icon_movie 0x0
 int drawable icon_shuffle 0x0
+int drawable icon_tv 0x0
 int drawable material_cursor_drawable 0x0
 int drawable material_ic_calendar_black_24dp 0x0
 int drawable material_ic_clear_black_24dp 0x0
@@ -2146,6 +2153,10 @@ int id home 0x0
 int id honorRequest 0x0
 int id horizontal_only 0x0
 int id icon 0x0
+int id iconCinema 0x0
+int id iconGenres 0x0
+int id iconMovies 0x0
+int id iconTv 0x0
 int id icon_group 0x0
 int id ignore 0x0
 int id ignoreRequest 0x0
@@ -2193,6 +2204,7 @@ int id material_timepicker_mode_button 0x0
 int id material_timepicker_ok_button 0x0
 int id material_timepicker_view 0x0
 int id material_value_index 0x0
+int id menu_actions 0x0
 int id message 0x0
 int id middle 0x0
 int id mini 0x0
@@ -2360,8 +2372,12 @@ int id test_radiobutton_android_button_tint 0x0
 int id test_radiobutton_app_button_tint 0x0
 int id text 0x0
 int id text2 0x0
+int id textCinema 0x0
+int id textGenres 0x0
+int id textMovies 0x0
 int id textSpacerNoButtons 0x0
 int id textSpacerNoTitle 0x0
+int id textTv 0x0
 int id text_input_end_icon 0x0
 int id text_input_error_icon 0x0
 int id text_input_start_icon 0x0
@@ -2389,6 +2405,7 @@ int id unchecked 0x0
 int id uniform 0x0
 int id unlabeled 0x0
 int id up 0x0
+int id upcomingTitle 0x0
 int id vertical_only 0x0
 int id view_offset_helper 0x0
 int id view_transition 0x0
@@ -2494,6 +2511,7 @@ int layout fragment_home 0x0
 int layout ime_base_split_test_activity 0x0
 int layout ime_secondary_split_test_activity 0x0
 int layout item_most_popular 0x0
+int layout items_menu 0x0
 int layout material_chip_input_combo 0x0
 int layout material_clock_display 0x0
 int layout material_clock_display_divider 0x0
@@ -2627,8 +2645,10 @@ int string error_icon_content_description 0x0
 int string exposed_dropdown_menu_content_description 0x0
 int string fab_transformation_scrim_behavior 0x0
 int string fab_transformation_sheet_behavior 0x0
+int string genres 0x0
 int string hide_bottom_view_on_scroll_behavior 0x0
 int string icon_content_description 0x0
+int string in_theatre_title 0x0
 int string item_view_role_description 0x0
 int string material_clock_display_divider 0x0
 int string material_clock_toggle_content_description 0x0
@@ -2652,6 +2672,7 @@ int string material_timepicker_select_time 0x0
 int string material_timepicker_text_input_mode_description 0x0
 int string most_popular_rate 0x0
 int string most_popular_title 0x0
+int string movies_title 0x0
 int string mtrl_badge_numberless_content_description 0x0
 int string mtrl_chip_close_icon_content_description 0x0
 int string mtrl_exceed_max_badge_number_content_description 0x0
@@ -2697,6 +2718,8 @@ int string path_password_strike_through 0x0
 int string search 0x0
 int string search_menu_title 0x0
 int string status_bar_notification_info_overflow 0x0
+int string tv_series_title 0x0
+int string upcoming_realeses_title 0x0
 int style AlertDialog_AppCompat 0x0
 int style AlertDialog_AppCompat_Light 0x0
 int style AndroidThemeColorAccentYellow 0x0
